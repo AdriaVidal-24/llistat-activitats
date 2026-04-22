@@ -1,0 +1,17 @@
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    float: left;
+
+    width: 15vw;
+    flex: 1 1 auto;
+    padding: 1%;
+    padding-left: 2vw;
+    padding-right: 4vw;
+    background-color: rgb(122, 89, 49);
+}
+
+aside * {
+    color: white;
+}
