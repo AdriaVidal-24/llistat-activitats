@@ -1,3 +1,15 @@
+:root {
+    --main-background: #F5F9FC;
+
+    --text: #112A46;
+}
+
+.accent {
+    --main-background: #482113;
+
+    --text: #FFECC6;
+}
+
 body, html {
     display: flex;
     height: 100%;
