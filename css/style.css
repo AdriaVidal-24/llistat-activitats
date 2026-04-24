@@ -44,6 +44,17 @@ main {
     width: 100%;
 }
 
+section {
+    width: 90%;
+    margin: 1%;
+    padding: 1%;
+    
+    border-radius: 10px;
+
+    box-shadow: 0 6px 1px rgba(231, 233, 235, 0.3);
+    background-color: var(--light-background);
+}
+
 /* COMMON CLASSES */
 
 .flex {
