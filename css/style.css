@@ -43,3 +43,53 @@ main {
     
     width: 100%;
 }
+
+/* COMMON CLASSES */
+
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.j-start {
+    justify-content: start;   
+}
+
+.j-center {
+    justify-content: center;
+}
+
+.j-end {
+    justify-content: end;
+}
+
+.j-around {
+    justify-content: space-around;
+}
+
+.j-between {
+    justify-content: space-between;
+}
+
+.a-start {
+    align-items: start;   
+}
+
+.a-center {
+    align-items: center;
+}
+
+.a-end {
+    align-items: end;
+}
+
+.a-around {
+    align-items: space-around;
+}
+
+.a-between {
+    align-items: space-between;
+}
