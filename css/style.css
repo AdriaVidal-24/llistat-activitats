@@ -1,11 +1,13 @@
 :root {
     --main-background: #F5F9FC;
+    --light-background: #ffffff;
 
     --text: #112A46;
 }
 
 .accent {
     --main-background: #482113;
+    --light-background: #6f402f;
 
     --text: #FFECC6;
 }
