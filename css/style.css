@@ -33,6 +33,7 @@ aside {
     padding: 1%;
     padding-left: 2vw;
     padding-right: 2vw;
+    min-width: fit-content;
     width: 15vw;
 }
 
