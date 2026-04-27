@@ -17,7 +17,7 @@ body, html {
     margin: 0;
 }
 
-*:not(h1, h2, h3, h4, h5, p) {
+*:not(h1, h2, h3, h4, h5, p, form, label) {
     background-color: var(--main-background);
     color: var(--text);
 }
