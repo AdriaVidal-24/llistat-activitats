@@ -131,3 +131,19 @@ main > div section {
 .a-between {
     align-items: space-between;
 }
+
+/* SPECIFIC CLASSES */
+
+.categories > section {
+    width: 50%;
+    height:fit-content;  
+}
+
+.categories > section:first-of-type {
+    min-height: 20%;
+}
+
+.categories > section * {
+    height: 100%;
+    width: 90%;
+}
