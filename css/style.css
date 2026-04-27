@@ -143,7 +143,7 @@ main > div section {
 
 /* SPECIFIC CLASSES */
 
-.categories > section {
+.small > section {
     width: 50%;
     height:fit-content;  
 }
