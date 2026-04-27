@@ -152,6 +152,10 @@ main > div section {
     min-height: 20%;
 }
 
+.categories form * {
+    min-height: 1.5rem;
+}
+
 .categories > section * {
     height: 100%;
     width: 90%;
