@@ -34,6 +34,30 @@ aside {
     width: 15vw;
 }
 
+aside > section {
+    max-height: 80vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+nav *:not(ul) {
+    padding: 10%;
+}
+
+nav *:not(ul):hover {
+    background-color: var(--light-background);
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 10%;
+}
+
+li{
+    width: 100%;
+    min-height: 30%;
+}
+
 main {
     display: flex;
     width: 100%;
