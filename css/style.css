@@ -22,6 +22,15 @@ body, html {
     color: var(--text);
 }
 
+button {
+    background-color: var(--main-background);
+    color: var(--text);
+}
+
+button:hover {
+    background-color: var(--light-background);
+}
+
 aside {
     display: flex;
     flex-direction: column;
