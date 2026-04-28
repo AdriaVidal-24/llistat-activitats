@@ -1,15 +1,16 @@
 :root {
-    --main-background: #f5f9fc;
+    --main-background: #f4f6f8;
     --light-background: #ffffff;
 
-    --text: #112A46;
+    --text: #1f2933;
 }
 
-.accent {
-    --main-background: #482113;
-    --light-background: #6f402f;
+.accent, button {
+    --main-background: #1e3a5f;
+    --light-background: #2b4c73;
 
-    --text: #FFECC6;
+    --text: #f0f4f8;
+}
 }
 
 body, html {
