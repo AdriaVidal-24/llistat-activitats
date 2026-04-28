@@ -65,6 +65,11 @@ aside > section {
     overflow-y: auto;
 }
 
+form > * {
+    margin: 1%;
+    min-height: 1.5rem;
+}
+
 nav *:not(ul) {
     padding: 10%;
 }
@@ -161,18 +166,32 @@ main > div section {
 
 .small > section {
     width: 50%;
-    height:fit-content;  
-}
-
-.categories > section:first-of-type {
-    min-height: 20%;
-}
-
-.categories form * {
-    min-height: 1.5rem;
 }
 
 .categories > section * {
-    height: 100%;
     width: 90%;
+}
+
+.category {
+    min-height: 4rem;
+}
+
+.category button {
+    width: 30%;
+}
+
+.category > div > div{
+
+    width: 30px;
+    height: 30px;
+
+    border: 3px solid black;
+    border-radius: 100%;
+
+    background-color: red;
+}
+
+label {
+    max-width: fit-content;
+    padding: 2%;
 }

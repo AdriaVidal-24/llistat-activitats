@@ -40,18 +40,27 @@
             <h1>Category management</h1>
 
             <section class="flex column a-center">
-                <form class="flex column a-center j-between">
-                    <label>Category name:</label>
-                    <input type="text">
+                <form id="category" class="flex column a-center j-between">
+                    <label for="cat-name">Category name:</label>
+                    <input id="cat-name" name="cat-name" type="text" required>
 
-                    <label>Category color:</label>
-                    <input type="color">
+                    <div class="flex j-start a-center">
+                        <label for="cat-color">Category color:</label>
+                        <input id="cat-color" name="cat-color" type="color">
+                    </div>
 
-                    <button class="accent" type="submit">Add category</button>
+                    <button type="submit">Add category</button>
                 </form>
             </section>
 
             <section>
+                <div class="flex row a-center j-between category">
+                    <div class="flex a-center">
+                        <div></div>
+                        <p>Category 1</p>
+                    </div>
+                    <button>Delete</button>
+                </div>
             </section>
         </div>
     </main>
