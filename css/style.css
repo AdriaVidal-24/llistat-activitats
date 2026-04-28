@@ -11,6 +11,19 @@
 
     --text: #f0f4f8;
 }
+
+.dark {
+    --main-background: #121417;
+    --light-background: #1c1f24;
+
+    --text: #e5e7eb;
+}
+
+.dark .accent {
+    --main-background: #16283d;
+    --light-background: #1f3a57;
+
+    --text: #dbeafe;
 }
 
 body, html {
