@@ -70,6 +70,10 @@ form > * {
     min-height: 1.5rem;
 }
 
+input[type="color"] {
+    max-width: 5rem;
+}
+
 nav *:not(ul) {
     padding: 10%;
 }
@@ -160,6 +164,18 @@ main > div section {
 
 .a-between {
     align-items: space-between;
+}
+
+.w-25 {
+    width: 25%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-75 {
+    width: 75%;
 }
 
 .w-90 {
