@@ -39,7 +39,7 @@
         <div class="small">
             <h1>Task creator</h1>
             <section>
-                <form id="task" class="flex column a-center">
+                <form id="task" class="flex column a-center" action="#">
                     <label for="task-name">Task name:</label>
                     <input type="text" id="task-name" name="task-name" placeholder="Task name">
                     <label for="task-description">Task description:</label>
@@ -52,16 +52,19 @@
                         <option>B</option>
                         <option>C</option>
                     </select>
+
                     <label for="task-priority">Priority:</label>
                     <select id="task-priority" name="task-priority">
                         <option>Low</option>
                         <option>Medium</option>
                         <option>High</option>
                     </select>
-                    <button type="submit">Create task</button>
+
                 </form>
+                <button id="task-submit">Create task</button>
             </section>
         </div>
     </main>
 </body>
+    <script type="module" src="js/form-tasca.js"></script> 
 </html>
