@@ -162,6 +162,22 @@ main > div section {
     align-items: space-between;
 }
 
+.w-90 {
+    width: 90%;
+}
+
+.g-1 {
+    gap: 1rem;
+}
+
+.g-2 {
+    gap: 2rem;
+}
+
+.g-3 {
+    gap: 3rem;
+}
+
 /* SPECIFIC CLASSES */
 
 .small > section {
