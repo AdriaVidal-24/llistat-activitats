@@ -108,3 +108,25 @@ export default class Task {
     }
 }
 
+export class Category {
+    constructor(name, color) {
+        this._name = name;
+        this._color = color;
+    }
+
+    set name(name) {
+        this._name = name
+    }
+
+    get name() {
+        return this._name;
+    }
+
+    set color(color) {
+        this._color = color
+    }
+
+    get color() {
+        return this._color;
+    }
+}
