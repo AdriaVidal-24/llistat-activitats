@@ -212,3 +212,11 @@ label {
     font-weight: bold;
     padding: 2%;
 }
+
+.task-item * {
+    margin: 5%;
+}
+
+.task-list {
+    flex-wrap: wrap;
+}
