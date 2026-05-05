@@ -1,6 +1,6 @@
 import saveTask from "/storage.js";
 
-export default class Task {
+export class Task {
     constructor(name, desc, date, category, priority) {
         this._name = name;
         this._desc = desc;
@@ -67,9 +67,7 @@ export default class Task {
         //     </div>
         // </div>
 
-        const storedTask = localStorage.getItem("task");
-
-        const TaskList = document.getElementById("task");
+        const TaskList = document.getElementById("task-list");
         const containerDiv = document.createElement("div");
         const firstDiv = document.createElement("div");
         const Title = document.createElement("p");
@@ -85,7 +83,7 @@ export default class Task {
         firstDiv.classList.add("flex", "column", "prueba");
         secondDiv.classList.add("flex", "column");
 
-        Title.textContent = this._title;
+        Title.textContent = this._name;
         Category.textContent = this._category;
         Date.textContent = this._date;
         Description.textContent = this._desc;
