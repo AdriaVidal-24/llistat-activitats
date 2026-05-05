@@ -1,5 +1,5 @@
-import saveTask from "./storage.js";
-import Task from "./models.js";
+import {saveTask} from "./storage.js";
+import {Task} from "./models.js";
 
 document.addEventListener("DOMContentLoaded", function(){
 
@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function(){
     const submitButton = document.getElementById("task-submit");
 
     submitButton.addEventListener("click", function(event) {
-        event.preventDefault;
+        event.preventDefault();
 
         const taskName = document.getElementById("task-name");
         const taskDescription = document.getElementById("task-description");
@@ -28,7 +28,8 @@ document.addEventListener("DOMContentLoaded", function(){
         taskDate.value = '';
 
         console.log(taskItem);
-        taskItem.saveTask;
+        saveTask(taskItem.toObject());
+        
     })
 
 })
