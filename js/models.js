@@ -1,5 +1,3 @@
-import saveTask from "/storage.js";
-
 export class Task {
     constructor(name, desc, date, category, priority) {
         this._name = name;
