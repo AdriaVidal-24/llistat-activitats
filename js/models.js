@@ -104,6 +104,16 @@ export class Task {
         secondDiv.appendChild(Priority);
         secondDiv.appendChild(buttonsDiv);
     }
+
+    toObject() {
+        return {
+            name: this._name,
+            desc: this._desc,
+            date: this._date,
+            category: this._category,
+            priority: this._priority
+        }
+    }
 }
 
 export class Category {
@@ -126,5 +136,12 @@ export class Category {
 
     get color() {
         return this._color;
+    }
+
+    toObject() {
+        return {
+            name: this._name,
+            color: this._color
+        }
     }
 }
