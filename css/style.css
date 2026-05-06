@@ -170,6 +170,10 @@ main > div section {
     width: 25%;
 }
 
+.w-32 {
+    width: 32%;
+}
+
 .w-50 {
     width: 50%;
 }
@@ -182,6 +186,10 @@ main > div section {
     width: 90%;
 }
 
+.w-100 {
+    width: 100%;
+}
+
 .g-1 {
     gap: 1rem;
 }
@@ -192,6 +200,10 @@ main > div section {
 
 .g-3 {
     gap: 3rem;
+}
+
+.p-2 {
+    padding: 2rem;
 }
 
 /* SPECIFIC CLASSES */
