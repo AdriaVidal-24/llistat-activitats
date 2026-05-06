@@ -242,6 +242,11 @@ label {
     padding: 2%;
 }
 
+.category-task {
+    padding: 5px;
+    border-radius: 10px;
+}
+
 .task-item * {
     margin: 5%;
 }
