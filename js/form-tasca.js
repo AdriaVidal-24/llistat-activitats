@@ -26,14 +26,7 @@ document.addEventListener("DOMContentLoaded", function(){
         const taskCategory = document.getElementById("task-category");
         const taskPriority = document.getElementById("task-priority");
 
-        const taskItem = new Task();
-
-        taskItem.name = taskName.value;
-        taskItem.desc = taskDescription.value;
-        taskItem.date = taskDate.value;
-        taskItem.category = taskCategory.value;
-        taskItem.priority = taskPriority.value;
-        taskItem.done = false;
+        const taskItem = new Task(null, taskName.value, taskDescription.value, taskDate.value, taskCategory.value, taskPriority.value, false);
 
         taskName.value = '';
         taskDescription.value = '';
