@@ -1,47 +1,47 @@
 [
   {
     "id": "task-006",
-    "titol": "Afegir importació amb fetch",
-    "descripcio": "Carrega activitats externes sense duplicats.",
-    "data": "2025-04-22",
-    "categoria": { "nom": "Dades", "color": "#81ecec" },
-    "prioritat": "Mitjana",
-    "realitzada": false
+    "name": "Afegir importació amb fetch",
+    "desc": "Carrega activitats externes sense duplicats.",
+    "date": "2025-04-22",
+    "category": { "name": "Dades", "color": "#81ecec" },
+    "priority": "Medium",
+    "done": false
   },
   {
     "id": "task-007",
-    "titol": "Gestió de categories a categories.html",
-    "descripcio": "Permet afegir i eliminar categories.",
-    "data": "2025-04-24",
-    "categoria": { "nom": "Funcionalitat", "color": "#00cec9" },
-    "prioritat": "Mitjana",
-    "realitzada": false
+    "name": "Gestió de categories a categories.html",
+    "desc": "Permet afegir i eliminar categories.",
+    "date": "2025-04-24",
+    "category": { "name": "Funcionalitat", "color": "#00cec9" },
+    "priority": "Medium",
+    "done": false
   },
   {
     "id": "task-008",
-    "titol": "Separa el projecte en mòduls JavaScript",
-    "descripcio": "Distribueix la lògica en fitxers com storage.js, models.js...",
-    "data": "2025-04-26",
-    "categoria": { "nom": "Codi net", "color": "#55efc4" },
-    "prioritat": "Alta",
-    "realitzada": false
+    "name": "Separa el projecte en mòduls JavaScript",
+    "desc": "Distribueix la lògica en fitxers com storage.js, models.js...",
+    "date": "2025-04-26",
+    "category": { "name": "Codi net", "color": "#55efc4" },
+    "priority": "High",
+    "done": false
   },
   {
     "id": "task-009",
-    "titol": "Aplica estils amb CSS",
-    "descripcio": "Fes que la interfície sigui usable i atractiva.",
-    "data": "2025-04-28",
-    "categoria": { "nom": "Disseny", "color": "#e5989b" },
-    "prioritat": "Baixa",
-    "realitzada": false
+    "name": "Aplica estils amb CSS",
+    "desc": "Fes que la interfície sigui usable i atractiva.",
+    "date": "2025-04-28",
+    "category": { "name": "Disseny", "color": "#e5989b" },
+    "priority": "Low",
+    "done": false
   },
   {
     "id": "task-010",
-    "titol": "Revisa, prova i entrega el projecte",
-    "descripcio": "Assegura't que tot funciona i que el codi està ordenat.",
-    "data": "2025-04-30",
-    "categoria": { "nom": "Finalització", "color": "#636e72" },
-    "prioritat": "Alta",
-    "realitzada": false
+    "name": "Revisa, prova i entrega el projecte",
+    "desc": "Assegura't que tot funciona i que el codi està ordenat.",
+    "date": "2025-04-30",
+    "category": { "name": "Finalització", "color": "#636e72" },
+    "priority": "High",
+    "done": false
   }
 ]
