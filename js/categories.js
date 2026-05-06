@@ -23,9 +23,14 @@ document.addEventListener("DOMContentLoaded", function(){
 
     document.getElementById("category").addEventListener("submit", function(event) {
         event.preventDefault();
-
+        
+        const existingCategories = getCategories();
         const categoryName = document.getElementById("cat-name");
         const categoryColor = document.getElementById("cat-color");
+
+        if(existingCategories.some(existingCategory => existingCategory.name === categoryName.value)) {
+            return;
+        }
 
         const categoryItem = new Category();
 
@@ -33,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function(){
         categoryItem.color = categoryColor.value;
 
         categoryName.value = '';
-        categoryColor.value = '#000000';
+        categoryColor.value = '#1e3a5f';
 
         console.log(categoryItem);
         saveCategory(categoryItem.toObject());

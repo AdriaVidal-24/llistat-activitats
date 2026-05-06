@@ -9,8 +9,6 @@ export function saveNewTasks(newTasks) {
     newTasks.forEach(task => {
         let id = task.id;
         if(existingTasks.map(existingTask => existingTask.id === id)) {
-            console.log("La id existeix,");
-            console.log(id);
             let count = localStorage.getItem('count') || 1;
             id =  `task-${String(count).padStart(3, "0")}`;
             count++;
@@ -19,7 +17,7 @@ export function saveNewTasks(newTasks) {
         task.id = id;
 
         const name = task.category.name;
-        if(existingCategories.map(existingCategory => existingCategory.name === name)) {
+        if(!existingCategories.some(existingCategory => existingCategory.name === name)) {
             newCategories.push({ name: task.category.name, color: task.category.color });
         }
         task.category = name;
