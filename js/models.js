@@ -1,3 +1,7 @@
+import { printTasks } from "./index.js";
+import { printCategories } from "./categories.js";
+import { deleteCategory, deleteTask, toggleTask } from "./storage.js";
+
 export class Task {
     constructor(name, desc, date, category, priority) {
         this._name = name;
