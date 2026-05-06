@@ -13,10 +13,16 @@ export function printTasks() {
         task = new Task(task.id, task.name, task.desc, task.date, task.category, task.priority, task.done);
         task.printTask();
     })
+
+    const totalTasks = tasks.length;
+    const nonCompletedTasks = tasks.filter(task => task.done === false).length;
+    const completedTasks = tasks.filter(task => task.done === true).length;
+    document.getElementById("total-tasks").innerHTML = "Tasks: "+totalTasks;
+    document.getElementById("non-completed-tasks").innerHTML = "Non-Completed Tasks: "+nonCompletedTasks;
+    document.getElementById("completed-tasks").innerHTML = "Completed Tasks: "+completedTasks;
 }
 
 document.addEventListener("DOMContentLoaded", function(){
-
     printTasks();
 
 })
