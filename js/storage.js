@@ -1,5 +1,38 @@
 import { printTasks } from "./index.js";
 
+export function saveNewTasks(newTasks) {
+    const existingTasks = getTasks();
+    const existingCategories = getCategories();
+
+    const newCategories = [];
+
+    newTasks.forEach(task => {
+        let id = task.id;
+        if(existingTasks.map(existingTask => existingTask.id === id)) {
+            console.log("La id existeix,");
+            console.log(id);
+            let count = localStorage.getItem('count') || 1;
+            id =  `task-${String(count).padStart(3, "0")}`;
+            count++;
+            localStorage.setItem('count', count)
+        }
+        task.id = id;
+
+        const name = task.category.name;
+        if(existingCategories.map(existingCategory => existingCategory.name === name)) {
+            newCategories.push({ name: task.category.name, color: task.category.color });
+        }
+        task.category = name;
+    }); 
+    const updatedTasks = [...existingTasks, ...newTasks];
+    localStorage.setItem('tasks', JSON.stringify(updatedTasks));
+
+    const updatedCategories = [...existingCategories, ...newCategories];
+    localStorage.setItem('categories', JSON.stringify(updatedCategories));
+
+    printTasks();
+}
+
 export function getTasks() {
     let taskListAux = localStorage.getItem('tasks') || '[]';
     taskListAux = JSON.parse(taskListAux);

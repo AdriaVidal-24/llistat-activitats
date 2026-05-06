@@ -25,4 +25,13 @@ export function printTasks() {
 document.addEventListener("DOMContentLoaded", function(){
     printTasks();
 
+    document.getElementById("import-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const file = document.getElementById("import-file").value;
+        fetch(`/dades/${file}`)
+        .then(response => response.json())
+        .then(newTasks => saveNewTasks(newTasks))
+        .catch(error => console.error(error));
+    });
 })
