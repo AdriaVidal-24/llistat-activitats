@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function(){
         taskItem.date = taskDate.value;
         taskItem.category = taskCategory.value;
         taskItem.priority = taskPriority.value;
+        taskItem.done = false;
 
         taskName.value = '';
         taskDescription.value = '';
