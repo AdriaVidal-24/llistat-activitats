@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function(){
     const categoryForm = document.getElementById("category");
     const submitButton = document.getElementById("cat-submit");
 
-    submitButton.addEventListener("click", function(event) {
+    document.getElementById("category").addEventListener("submit", function(event) {
         event.preventDefault();
 
         const categoryName = document.getElementById("cat-name");

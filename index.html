@@ -25,6 +25,7 @@
                 <nav class="flex column">
                     <a href="index.html">Projects</a>
                         <ul>
+                            <li>No project</li>
                             <li>Project A</li>
                             <li>Project B</li>
                             <li>Project C</li>
@@ -43,9 +44,13 @@
                 <h2>Add tasks</h2>
                 <div class="flex w-90 j-between">
                     <button><a href="crear-tasca.html">Add new task</a></button>
-                    <form class="flex">
-                        <input placeholder="File name">
-                        <button>Upload</button>
+                    <form class="flex" id="import-form">
+                        <select id="import-file" required>
+                            <option disabled selected>Select a JSON file</option>
+                            <option>activitats_001.json</option>
+                            <option>activitats_002.json</option>
+                        </select>
+                        <button type="submit">Upload</button>
                     </form>
                 </div>
             </section>

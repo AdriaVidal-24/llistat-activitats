@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function(){
     const taskForm = document.getElementById("task");
     const submitButton = document.getElementById("task-submit");
 
-    submitButton.addEventListener("click", function(event) {
+    document.getElementById("task").addEventListener("submit", function(event) {
         event.preventDefault();
 
         const taskName = document.getElementById("task-name");
