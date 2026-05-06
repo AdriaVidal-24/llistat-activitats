@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function(){
         event.preventDefault();
 
         const file = document.getElementById("import-file").value;
-        fetch(`/dades/${file}`)
+        fetch(`../dades/${file}`)
         .then(response => response.json())
         .then(newTasks => saveNewTasks(newTasks))
         .catch(error => console.error(error));
