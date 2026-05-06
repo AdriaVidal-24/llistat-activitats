@@ -1,19 +1,19 @@
 import {getCategories, saveCategory} from "./storage.js";
 import {Category} from "./models.js";
 
+export function printCategories() {
+    const categories = getCategories();
+
+    const container = document.getElementById('cat-list');
+    container.innerHTML = '';
+
+    categories.forEach(cat => {
+        cat = new Category(cat.name, cat.color);
+        cat.printCategory();
+    })
+}
+
 document.addEventListener("DOMContentLoaded", function(){
-
-    function printCategories() {
-        const categories = getCategories();
-
-        const container = document.getElementById('cat-list');
-        container.innerHTML = '';
-
-        categories.forEach(cat => {
-            cat = new Category(cat.name, cat.color);
-            cat.printCategory();
-        })
-    }
 
     printCategories();
 
