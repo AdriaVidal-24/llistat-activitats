@@ -1,5 +1,5 @@
-import {Task} from "./models.js";
-import {getTasks} from "./storage.js";
+import { Task } from "./models.js";
+import { getTasks, saveNewTasks } from "./storage.js";
 
 export function printTasks() {
     const tasks = getTasks();

@@ -1,5 +1,5 @@
-import {saveTask} from "./storage.js";
-import {Task} from "./models.js";
+import { Task } from "./models.js";
+import { getCategories, saveTask } from "./storage.js";
 
 document.addEventListener("DOMContentLoaded", function(){
 

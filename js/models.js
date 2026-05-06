@@ -1,6 +1,6 @@
-import { printTasks } from "./index.js";
 import { printCategories } from "./categories.js";
-import { deleteCategory, deleteTask, toggleTask } from "./storage.js";
+import { printTasks } from "./index.js";
+import { deleteCategory, deleteTask, getCategories, toggleTask } from "./storage.js";
 
 export class Task {
     static count = 0;

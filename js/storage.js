@@ -1,3 +1,5 @@
+import { printTasks } from "./index.js";
+
 export function getTasks() {
     let taskListAux = localStorage.getItem('tasks') || '[]';
     taskListAux = JSON.parse(taskListAux);

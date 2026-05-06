@@ -1,5 +1,5 @@
-import {getCategories, saveCategory} from "./storage.js";
-import {Category} from "./models.js";
+import { Category } from "./models.js";
+import { getCategories, saveCategory } from "./storage.js";
 
 export function printCategories() {
     const categories = getCategories();
