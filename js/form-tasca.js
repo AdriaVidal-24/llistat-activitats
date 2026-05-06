@@ -3,8 +3,19 @@ import { getCategories, saveTask } from "./storage.js";
 
 document.addEventListener("DOMContentLoaded", function(){
 
+    const taskCategory = document.getElementById("task-category");
+    const categories = getCategories();
     const taskForm = document.getElementById("task");
     const submitButton = document.getElementById("task-submit");
+
+    taskCategory.innerHTML = '';
+    categories.forEach(category => {
+        const option = document.createElement("option");
+        option.value = category.name;
+        option.textContent = category.name;
+        option.style.backgroundColor = category.color;
+        taskCategory.appendChild(option);
+    });
 
     document.getElementById("task").addEventListener("submit", function(event) {
         event.preventDefault();
