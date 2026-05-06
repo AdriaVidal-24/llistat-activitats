@@ -27,7 +27,6 @@
 }
 
 body, html {
-    height: 100%;
     margin: 0;
 }
 
@@ -51,11 +50,15 @@ aside {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: sticky;
+    top: 0;
 
+    box-sizing: border-box;
     padding: 1%;
     padding-left: 2vw;
     padding-right: 2vw;
     min-width: fit-content;
+    height: 100vh;
     width: 15vw;
 }
 
