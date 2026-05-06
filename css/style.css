@@ -234,3 +234,8 @@ label {
 .task-list {
     flex-wrap: wrap;
 }
+
+#done-task-list p, #done-task-list svg {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
