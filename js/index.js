@@ -2,8 +2,8 @@ import { printChart } from "./grafics.js";
 import { Task } from "./models.js";
 import { getTasks, saveNewTasks } from "./storage.js";
 
-export function printTasks() {
-    const tasks = getTasks();
+export function printTasks(project) {
+    const tasks = getTasksByProject(project);
 
     const container = document.getElementById('task-list');
     const containerDone = document.getElementById('done-task-list');
@@ -22,8 +22,16 @@ export function printTasks() {
     renderStats();
 }
 
+export function getTasksByProject() {
+    const project = getCurrentProject();
+    if (!project) {
+        return getTasks();
+    }
+    return getTasks().filter(task => task.project === project);
+}
+
 function renderStats() {
-    const tasks = getTasks();
+    const tasks = getTasksByProject();
     const totalTasks = tasks.length;
     const completedTasks = tasks.filter(task => task.done === true).length;
     const nonCompletedTasks = totalTasks - completedTasks;
@@ -34,6 +42,7 @@ function renderStats() {
 
 document.addEventListener("DOMContentLoaded", function(){
     printTasks();
+    printProjects();
 
     const form = document.getElementById("import-form");
     if(form == null) {
