@@ -6,12 +6,12 @@ export function saveNewTasks(newTasks) {
 
     newTasks.forEach(task => {
         let id = task.id;
-        let count = localStorage.getItem('count') || 1;
+        let count = JSON.parse(localStorage.getItem('count')) || 1;
         if(existingTasks.some(existingTask => existingTask.id === id)) {
             id =  `task-${String(count).padStart(3, "0")}`;
         }
         count++;
-        localStorage.setItem('count', count)
+        localStorage.setItem('count', JSON.stringify(count));
         task.id = id;
 
         const name = task.category.name;
@@ -28,9 +28,7 @@ export function saveNewTasks(newTasks) {
 }
 
 export function getTasks() {
-    let taskListAux = localStorage.getItem('tasks') || '[]';
-    taskListAux = JSON.parse(taskListAux);
-    return taskListAux;
+    return JSON.parse(localStorage.getItem('tasks')) || [];
 }
 
 export function saveTask(task) {
@@ -38,15 +36,13 @@ export function saveTask(task) {
     let taskListAux = getTasks();
     taskListAux.push(task);
     console.log(taskListAux);
-    taskListAux = JSON.stringify(taskListAux);
-    localStorage.setItem('tasks', taskListAux);
+    localStorage.setItem('tasks', JSON.stringify(taskListAux));
 }
 
 export function deleteTask(id) {
     let taskListAux = getTasks();
     taskListAux = taskListAux.filter(task => id != task.id);
-    taskListAux = JSON.stringify(taskListAux);
-    localStorage.setItem('tasks', taskListAux);
+    localStorage.setItem('tasks', JSON.stringify(taskListAux));
 }
 
 export function toggleTask(id) {
@@ -57,28 +53,25 @@ export function toggleTask(id) {
         }
         return task;
     });
-    taskListAux = JSON.stringify(taskListAux);
-    localStorage.setItem('tasks', taskListAux);
+    localStorage.setItem('tasks', JSON.stringify(taskListAux));
 }
 
 export function getCategories() {
-    let categoryListAux = localStorage.getItem('categories') || '[]';
-    categoryListAux = JSON.parse(categoryListAux);
-    return categoryListAux;
+    return JSON.parse(localStorage.getItem('categories')) || [];
 }
 
 export function saveCategory(category) {
     let categoryListAux = getCategories();
     categoryListAux.push(category);
-    categoryListAux = JSON.stringify(categoryListAux);
-    localStorage.setItem('categories', categoryListAux);
+    localStorage.setItem('categories', JSON.stringify(categoryListAux));
 }
 
 export function deleteCategory(name) {
     let categoryListAux = getCategories();
     categoryListAux = categoryListAux.filter(category => name != category.name);
-    categoryListAux = JSON.stringify(categoryListAux);
-    localStorage.setItem('categories', categoryListAux);
+    localStorage.setItem('categories', JSON.stringify(categoryListAux));
+}
+
 export function getTasksMonth() {
     return JSON.parse(localStorage.getItem('dataMonth')) || [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 }
