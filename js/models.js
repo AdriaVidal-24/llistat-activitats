@@ -72,7 +72,7 @@ export class Task {
     }
     
     printTask() {
-        // <div class="flex w-32 j-around task-item">
+        // <div class="flex w-30 j-around task-item">
         //     <div class="flex column w-100">
         //         <p></p>
         //         <p class="category-task"></p>
@@ -101,7 +101,7 @@ export class Task {
         const Priority = document.createElement("p");
         const buttonsDiv = document.createElement("div");
 
-        containerDiv.classList.add("flex", "w-32", "j-around", "task-item");
+        containerDiv.classList.add("flex", "w-30", "j-around", "task-item");
         firstDiv.classList.add("flex", "column", "w-100");
         secondDiv.classList.add("flex", "column", "w-25", "j-around");
         Category.classList.add("category-task");
