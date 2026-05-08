@@ -147,13 +147,11 @@ export class Task {
         const id = this._id;
         
         buttonsDiv.querySelector(".task-delete").addEventListener("click", function() {
-            console.log(id);
             deleteTask(id);
             printTasks();
         })
         
         buttonsDiv.querySelector(".task-done").addEventListener("click", function() {
-            console.log(id);
             toggleTask(id);
             printTasks();
         })
@@ -237,7 +235,6 @@ export class Category {
         let catName = this._name;
 
         deleteButton.addEventListener("click", function() {
-            console.log(catName);
             deleteCategory(catName);
             printCategories();
         })

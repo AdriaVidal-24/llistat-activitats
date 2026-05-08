@@ -40,7 +40,6 @@ document.addEventListener("DOMContentLoaded", function(){
         categoryName.value = '';
         categoryColor.value = '#1e3a5f';
 
-        console.log(categoryItem);
         saveCategory(categoryItem.toObject());
         printCategories();
     })

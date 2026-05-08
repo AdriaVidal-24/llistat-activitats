@@ -32,10 +32,8 @@ export function getTasks() {
 }
 
 export function saveTask(task) {
-    console.log(task);
     let taskListAux = getTasks();
     taskListAux.push(task);
-    console.log(taskListAux);
     localStorage.setItem('tasks', JSON.stringify(taskListAux));
 }
 

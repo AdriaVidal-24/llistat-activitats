@@ -32,7 +32,6 @@ document.addEventListener("DOMContentLoaded", function(){
         taskDescription.value = '';
         taskDate.value = '';
 
-        console.log(taskItem);
         saveTask(taskItem.toObject());
         
     })
