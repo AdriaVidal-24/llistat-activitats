@@ -70,6 +70,23 @@ export function deleteCategory(name) {
     localStorage.setItem('categories', JSON.stringify(categoryListAux));
 }
 
+export function getProjects() {
+    return JSON.parse(localStorage.getItem('projects')) || [];
+}
+
+export function saveProject(project) {
+    let projectListAux = getProjects();
+    if (projectListAux.includes(project.value)) return;
+    projectListAux.push(project);
+    localStorage.setItem('projects', JSON.stringify(projectListAux));
+}
+
+export function deleteProject(name) {
+    let projectListAux = getProjects();
+    projectListAux = projectListAux.filter(project => project !== name);
+    localStorage.setItem('projects', JSON.stringify(projectListAux));
+}
+
 export function getTasksMonth() {
     return JSON.parse(localStorage.getItem('dataMonth')) || [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 }
@@ -84,4 +101,12 @@ export function saveCount(count) {
 
 export function getCount() {
     return localStorage.getItem('count') || 0;
+}
+
+export function saveCurrentProject(project) {
+    localStorage.setItem('current-project', project);
+}
+
+export function getCurrentProject() {
+    return localStorage.getItem('current-project');
 }
