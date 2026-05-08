@@ -6,12 +6,12 @@ export function saveNewTasks(newTasks) {
 
     newTasks.forEach(task => {
         let id = task.id;
-        let count = JSON.parse(localStorage.getItem('count')) || 1;
+        let count = getCount();
         if(existingTasks.some(existingTask => existingTask.id === id)) {
             id =  `task-${String(count).padStart(3, "0")}`;
         }
         count++;
-        localStorage.setItem('count', JSON.stringify(count));
+        saveCount(count);
         task.id = id;
 
         const name = task.category.name;
