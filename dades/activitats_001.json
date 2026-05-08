@@ -6,7 +6,8 @@
     "date": "2025-04-15",
     "category": { "name": "Organització", "color": "#f7df1e" },
     "priority": "High",
-    "done": false
+    "done": false,
+    "project": ""
   },
   {
     "id": "task-002",
@@ -15,7 +16,8 @@
     "date": "2025-04-16",
     "category": { "name": "Disseny", "color": "#e5989b" },
     "priority": "Medium",
-    "done": false
+    "done": false,
+    "project": ""
   },
   {
     "id": "task-003",
@@ -24,7 +26,8 @@
     "date": "2025-04-17",
     "category": { "name": "Formularis", "color": "#6c5ce7" },
     "priority": "High",
-    "done": false
+    "done": false,
+    "project": ""
   },
   {
     "id": "task-004",
@@ -33,7 +36,8 @@
     "date": "2025-04-18",
     "category": { "name": "Funcionalitat", "color": "#00cec9" },
     "priority": "High",
-    "done": false
+    "done": false,
+    "project": ""
   },
   {
     "id": "task-005",
@@ -42,6 +46,7 @@
     "date": "2025-04-20",
     "category": { "name": "Visualització", "color": "#fab1a0" },
     "priority": "High",
-    "done": false
+    "done": false,
+    "project": ""
   }
 ]

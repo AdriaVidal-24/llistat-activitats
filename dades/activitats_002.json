@@ -6,7 +6,8 @@
     "date": "2025-04-22",
     "category": { "name": "Dades", "color": "#81ecec" },
     "priority": "Medium",
-    "done": false
+    "done": false,
+    "project": ""
   },
   {
     "id": "task-007",
@@ -15,7 +16,8 @@
     "date": "2025-04-24",
     "category": { "name": "Funcionalitat", "color": "#00cec9" },
     "priority": "Medium",
-    "done": false
+    "done": false,
+    "project": ""
   },
   {
     "id": "task-008",
@@ -24,7 +26,8 @@
     "date": "2025-04-26",
     "category": { "name": "Codi net", "color": "#55efc4" },
     "priority": "High",
-    "done": false
+    "done": false,
+    "project": ""
   },
   {
     "id": "task-009",
@@ -33,7 +36,8 @@
     "date": "2025-04-28",
     "category": { "name": "Disseny", "color": "#e5989b" },
     "priority": "Low",
-    "done": false
+    "done": false,
+    "project": ""
   },
   {
     "id": "task-010",
@@ -42,6 +46,7 @@
     "date": "2025-04-30",
     "category": { "name": "Finalització", "color": "#636e72" },
     "priority": "High",
-    "done": false
+    "done": false,
+    "project": ""
   }
 ]
