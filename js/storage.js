@@ -83,4 +83,11 @@ export function deleteCategory(name) {
     categoryListAux = categoryListAux.filter(category => name != category.name);
     categoryListAux = JSON.stringify(categoryListAux);
     localStorage.setItem('categories', categoryListAux);
+export function getTasksMonth() {
+    return JSON.parse(localStorage.getItem('dataMonth')) || [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+}
+
+export function saveTasksMonth(data) {
+    localStorage.setItem('dataMonth', JSON.stringify(data));
+}
 }
