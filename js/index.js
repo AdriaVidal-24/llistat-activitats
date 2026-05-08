@@ -22,6 +22,34 @@ export function printTasks(project) {
     renderStats();
 }
 
+export function printProjects() {
+    const projects = getProjects();
+
+    const container = document.getElementById('projects-aside');
+    container.innerHTML = '';
+    
+    let projectItem = document.createElement("li");
+    projectItem.textContent = "No project";
+    projectItem.value = "";
+    projectItem.addEventListener("click", function(event) {
+        saveCurrentProject("");
+        printTasks("");
+    });
+    container.appendChild(projectItem);
+    projects.forEach(project => {
+        let projectItem = document.createElement("li");
+
+        projectItem.textContent = project;
+
+        projectItem.addEventListener("click", function(event) {
+            saveCurrentProject(project);
+            printTasks(project);
+        });
+
+        container.appendChild(projectItem);
+    });
+}
+
 export function getTasksByProject() {
     const project = getCurrentProject();
     if (!project) {
