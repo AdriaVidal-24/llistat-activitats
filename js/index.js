@@ -18,12 +18,18 @@ export function printTasks() {
         taskItem.printTask();
     })
 
+    printChart();
+    renderStats();
+}
+
+function renderStats() {
+    const tasks = getTasks();
     const totalTasks = tasks.length;
-    const nonCompletedTasks = tasks.filter(task => task.done === false).length;
     const completedTasks = tasks.filter(task => task.done === true).length;
-    document.getElementById("total-tasks").innerHTML = "Tasks: "+totalTasks;
-    document.getElementById("non-completed-tasks").innerHTML = "Non-Completed Tasks: "+nonCompletedTasks;
-    document.getElementById("completed-tasks").innerHTML = "Completed Tasks: "+completedTasks;
+    const nonCompletedTasks = totalTasks - completedTasks;
+    document.getElementById("total-tasks").textContent = "Tasks: "+totalTasks;
+    document.getElementById("completed-tasks").textContent = "Completed Tasks: "+completedTasks;
+    document.getElementById("non-completed-tasks").textContent = "Non-Completed Tasks: "+nonCompletedTasks;
 }
 
 document.addEventListener("DOMContentLoaded", function(){
