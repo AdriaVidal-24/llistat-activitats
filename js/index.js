@@ -14,7 +14,6 @@ export function printTasks() {
     containerDone.innerHTML = '';
 
     tasks.forEach(task => {
-        task = new Task(task.id, task.name, task.desc, task.date, task.category, task.priority, task.done);
         const taskItem = new Task(task.id, task.name, task.desc, task.date, task.category, task.priority, task.done);
         taskItem.printTask();
     })

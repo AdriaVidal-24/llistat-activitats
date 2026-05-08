@@ -38,10 +38,7 @@ document.addEventListener("DOMContentLoaded", function(){
             return;
         }
 
-        const categoryItem = new Category();
-
-        categoryItem.name = categoryName.value;
-        categoryItem.color = categoryColor.value;
+        const categoryItem = new Category(categoryName.value.trim(), categoryColor.value);
 
         categoryName.value = '';
         categoryColor.value = '#1e3a5f';
