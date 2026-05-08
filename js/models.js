@@ -148,11 +148,19 @@ export class Task {
         
         buttonsDiv.querySelector(".task-delete").addEventListener("click", function() {
             deleteTask(id);
+            if(done) {
+                removeTaskMonth();
+            }
             printTasks();
         })
         
         buttonsDiv.querySelector(".task-done").addEventListener("click", function() {
             toggleTask(id);
+            if(done) {
+                removeTaskMonth();
+            } else {
+                addTaskMonth();
+            }
             printTasks();
         })
 
