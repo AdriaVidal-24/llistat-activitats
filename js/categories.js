@@ -12,8 +12,8 @@ export function printCategories() {
     container.innerHTML = '';
     
     categories.forEach(cat => {
-        cat = new Category(cat.name, cat.color);
-        cat.printCategory();
+        const category = new Category(cat.name, cat.color);
+        category.printCategory();
     })
 }
 

@@ -15,7 +15,8 @@ export function printTasks() {
 
     tasks.forEach(task => {
         task = new Task(task.id, task.name, task.desc, task.date, task.category, task.priority, task.done);
-        task.printTask();
+        const taskItem = new Task(task.id, task.name, task.desc, task.date, task.category, task.priority, task.done);
+        taskItem.printTask();
     })
 
     const totalTasks = tasks.length;
