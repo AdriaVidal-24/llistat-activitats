@@ -108,7 +108,7 @@ export class Task {
         buttonsDiv.classList.add("flex", "row")
         
         let categories = getCategories();
-        categories = categories.map(category => {
+        categories = categories.some(category => {
             if (category.name == this._category) {
                 Category.style.backgroundColor = category.color;
             }
