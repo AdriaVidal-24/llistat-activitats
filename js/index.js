@@ -1,6 +1,6 @@
 import { printChart } from "./grafics.js";
 import { Task } from "./models.js";
-import { getTasks, saveNewTasks } from "./storage.js";
+import { getCurrentProject, getProjects, getTasks, saveCurrentProject, saveNewTasks } from "./storage.js";
 
 export function printTasks(project) {
     const tasks = getTasksByProject(project);
