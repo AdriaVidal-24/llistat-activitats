@@ -49,7 +49,9 @@
                     <input type="date" id="task-date" name="task-date" placeholder="dd/mm/aaaa">
                     <label for="task-category">Task category:</label>
                     <select id="task-category" name="task-category"></select>
-
+                    <label for="task-project">Task project:</label>
+                    <select id="task-project" name="task-project">
+                    </select>
                     <label for="task-priority">Priority:</label>
                     <select id="task-priority" name="task-priority" required>
                         <option>Low</option>
@@ -58,6 +60,21 @@
                     </select>
                     <button id="task-submit" type="submit">Create task</button>
                 </form>
+            </section>
+
+            <section>
+                <h2>Project manager</h2>
+                <form id="project" class="flex column a-center">
+                    <label for="project-name">Project name</label>
+                    <input id="project-name" name="project-name" required>
+                    <button id="project-submit" type="submit">Create project</button>
+                </form>
+            </section>
+
+            <section class="flex column a-center">
+                <h2>Project llist</h2>
+                <div id="project-list" class="flex column w-50 g-1">
+                </div>
             </section>
         </div>
     </main>
