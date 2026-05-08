@@ -8,10 +8,10 @@ export class Task {
 
     constructor(id, name, desc, date, category, priority, done) {
         if(id == null) {
-            Task.count = localStorage.getItem('count') || 1;
+            Task.count = getCount();
             this._id = `task-${String(Task.count).padStart(3, "0")}`;
             Task.count++;
-            localStorage.setItem('count', Task.count);
+            saveCount(Task.count);
         } else {
             this._id = id;
         }

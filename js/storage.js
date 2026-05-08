@@ -77,4 +77,11 @@ export function getTasksMonth() {
 export function saveTasksMonth(data) {
     localStorage.setItem('dataMonth', JSON.stringify(data));
 }
+
+export function saveCount(count) {
+    localStorage.setItem('count', count);
+}
+
+export function getCount() {
+    return localStorage.getItem('count') || 0;
 }
