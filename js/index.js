@@ -6,8 +6,11 @@ export function printTasks() {
     const tasks = getTasks();
 
     const container = document.getElementById('task-list');
-    container.innerHTML = '';
     const containerDone = document.getElementById('done-task-list');
+    if(!container || !containerDone) {
+        return;
+    }
+    container.innerHTML = '';
     containerDone.innerHTML = '';
 
     tasks.forEach(task => {
@@ -26,7 +29,12 @@ export function printTasks() {
 document.addEventListener("DOMContentLoaded", function(){
     printTasks();
 
-    document.getElementById("import-form").addEventListener("submit", function(event) {
+    const form = document.getElementById("import-form");
+    if(form == null) {
+        return;
+    }
+
+    form.addEventListener("submit", function(event) {
         event.preventDefault();
 
         const file = document.getElementById("import-file").value;
