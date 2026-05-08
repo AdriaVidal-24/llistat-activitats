@@ -1,5 +1,3 @@
-import { printTasks } from "./index.js";
-
 export function saveNewTasks(newTasks) {
     const existingTasks = getTasks();
     const existingCategories = getCategories();
@@ -27,8 +25,6 @@ export function saveNewTasks(newTasks) {
 
     const updatedCategories = [...existingCategories, ...newCategories];
     localStorage.setItem('categories', JSON.stringify(updatedCategories));
-
-    printTasks();
 }
 
 export function getTasks() {

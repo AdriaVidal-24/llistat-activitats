@@ -1,6 +1,7 @@
 import { printCategories } from "./categories.js";
 import { printTasks } from "./index.js";
-import { deleteCategory, deleteTask, getCategories, toggleTask } from "./storage.js";
+import { deleteCategory, deleteTask, getCategories, toggleTask, getCount, saveCount } from "./storage.js";
+import { addTaskMonth, removeTaskMonth } from "./grafics.js";
 
 export class Task {
     static count = 1;

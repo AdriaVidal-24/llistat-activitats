@@ -1,3 +1,4 @@
+import { printChart } from "./grafics.js";
 import { Task } from "./models.js";
 import { getTasks, saveNewTasks } from "./storage.js";
 
