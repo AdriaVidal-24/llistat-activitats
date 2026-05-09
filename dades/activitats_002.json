@@ -7,7 +7,7 @@
     "category": { "name": "Dades", "color": "#81ecec" },
     "priority": "Medium",
     "done": false,
-    "project": ""
+    "project": "Llistat d'activitats"
   },
   {
     "id": "task-007",
@@ -17,7 +17,7 @@
     "category": { "name": "Funcionalitat", "color": "#00cec9" },
     "priority": "Medium",
     "done": false,
-    "project": ""
+    "project": "Llistat d'activitats"
   },
   {
     "id": "task-008",
@@ -27,7 +27,7 @@
     "category": { "name": "Codi net", "color": "#55efc4" },
     "priority": "High",
     "done": false,
-    "project": ""
+    "project": "Llistat d'activitats"
   },
   {
     "id": "task-009",
@@ -37,7 +37,7 @@
     "category": { "name": "Disseny", "color": "#e5989b" },
     "priority": "Low",
     "done": false,
-    "project": ""
+    "project": "Llistat d'activitats"
   },
   {
     "id": "task-010",
@@ -47,6 +47,6 @@
     "category": { "name": "Finalització", "color": "#636e72" },
     "priority": "High",
     "done": false,
-    "project": ""
+    "project": "Llistat d'activitats"
   }
 ]

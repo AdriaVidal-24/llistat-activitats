@@ -7,7 +7,7 @@
     "category": { "name": "Organització", "color": "#f7df1e" },
     "priority": "High",
     "done": false,
-    "project": ""
+    "project": "Llistat d'activitats"
   },
   {
     "id": "task-002",
@@ -17,7 +17,7 @@
     "category": { "name": "Disseny", "color": "#e5989b" },
     "priority": "Medium",
     "done": false,
-    "project": ""
+    "project": "Llistat d'activitats"
   },
   {
     "id": "task-003",
@@ -27,7 +27,7 @@
     "category": { "name": "Formularis", "color": "#6c5ce7" },
     "priority": "High",
     "done": false,
-    "project": ""
+    "project": "Llistat d'activitats"
   },
   {
     "id": "task-004",
@@ -37,7 +37,7 @@
     "category": { "name": "Funcionalitat", "color": "#00cec9" },
     "priority": "High",
     "done": false,
-    "project": ""
+    "project": "Llistat d'activitats"
   },
   {
     "id": "task-005",
@@ -47,6 +47,6 @@
     "category": { "name": "Visualització", "color": "#fab1a0" },
     "priority": "High",
     "done": false,
-    "project": ""
+    "project": "Llistat d'activitats"
   }
 ]
