@@ -90,20 +90,12 @@ export function deleteProject(name) {
     localStorage.setItem('projects', JSON.stringify(projectListAux));
 }
 
-export function getTasksMonth() {
-    return JSON.parse(localStorage.getItem('dataMonth')) || [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-}
-
-export function saveTasksMonth(data) {
-    localStorage.setItem('dataMonth', JSON.stringify(data));
-}
-
 export function saveCount(count) {
-    localStorage.setItem('count', count);
+    localStorage.setItem('count', Number(count));
 }
 
 export function getCount() {
-    return localStorage.getItem('count') || 0;
+    return Number(localStorage.getItem('count')) || 1;
 }
 
 export function saveCurrentProject(project) {

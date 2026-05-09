@@ -1,36 +1,30 @@
-import { getTasksMonth, saveTasksMonth } from "./storage.js";
+import { getCurrentProject, getProjects, getTasks, saveCurrentProject } from "./storage.js";
 
-const month = new Date().getMonth();
-const monthLabels = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 let chart = null;
-
-export function addTaskMonth() {
-    const data = getTasksMonth();
-    data[month]++;
-    saveTasksMonth(data);
-}
-
-export function removeTaskMonth() {
-    const data = getTasksMonth();
-    if(data[month] > 0) {
-        data[month]--;
-    }
-    saveTasksMonth(data);
-}
 
 export function printChart() {
     const ctx = document.getElementById('Graph');
-    const data = getTasksMonth();
+    
+    const tasks = getTasks();
+    const projects = getProjects();
+    
+    const projectLabels = ["Any project"];
+    const data = [tasks.filter(task => task.done).length];
+    
+    projects.forEach(project => {
+        let currTasks = tasks.filter(task => task.project == project && task.done);
+        data.push(currTasks.length);
+        projectLabels.push(project);
+    });
     
     if(chart) {
         chart.destroy();
     }
-    
 
     chart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: monthLabels,
+            labels: projectLabels,
             datasets: [{
                 label: '# of Tasks completed',
                 data: data,
