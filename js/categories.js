@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
     const categoryForm = document.getElementById("category");
 
-    if(categoryForm == null || submitButton == null) {
+    if(categoryForm == null) {
         return;
     }
 

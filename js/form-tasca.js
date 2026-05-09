@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function(){
     function printProjectList() {
         const projects = getProjects();
         projectList.innerHTML = '';
-        taskProject.innerHTML = '<option selected>No project</option>';
+        taskProject.innerHTML = '<option selected>Any project</option>';
         projects.forEach(project => {
             const option = document.createElement("option");
             option.value = project;

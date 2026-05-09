@@ -48,7 +48,7 @@ export function deleteTask(id) {
 
 export function toggleTask(id) {
     let taskListAux = getTasks();
-    taskListAux = taskListAux.map(task => {
+    taskListAux.forEach(task => {
         if(task.id === id) {
             task.done = !task.done;
         }
@@ -79,7 +79,7 @@ export function getProjects() {
 
 export function saveProject(project) {
     let projectListAux = getProjects();
-    if (projectListAux.includes(project.value)) return;
+    if (projectListAux.includes(project)) return;
     projectListAux.push(project);
     localStorage.setItem('projects', JSON.stringify(projectListAux));
 }
