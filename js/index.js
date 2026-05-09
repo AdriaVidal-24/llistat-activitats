@@ -2,8 +2,8 @@ import { printChart } from "./grafics.js";
 import { Task } from "./models.js";
 import { getCurrentProject, getProjects, getTasks, saveCurrentProject, saveNewTasks } from "./storage.js";
 
-export function printTasks(project) {
-    const tasks = getTasksByProject(project);
+export function printTasks() {
+    const tasks = getTasksByProject();
 
     const container = document.getElementById('task-list');
     const containerDone = document.getElementById('done-task-list');
@@ -14,7 +14,7 @@ export function printTasks(project) {
     containerDone.innerHTML = '';
 
     tasks.forEach(task => {
-        const taskItem = new Task(task.id, task.name, task.desc, task.date, task.category, task.priority, task.done);
+        const taskItem = new Task(task.id, task.name, task.desc, task.date, task.category, task.priority, task.done, task.project);
         taskItem.printTask();
     })
 
@@ -26,11 +26,14 @@ export function printProjects() {
     const projects = getProjects();
 
     const container = document.getElementById('projects-aside');
+    const index = document.getElementById('task-list');
+    if(!container) {
+        return;
+    }
     container.innerHTML = '';
     
     let projectItem = document.createElement("li");
-    projectItem.textContent = "No project";
-    projectItem.value = "";
+    projectItem.textContent = "Any project";
     projectItem.addEventListener("click", function(event) {
         saveCurrentProject("");
         printTasks("");
@@ -38,12 +41,15 @@ export function printProjects() {
     container.appendChild(projectItem);
     projects.forEach(project => {
         let projectItem = document.createElement("li");
-
         projectItem.textContent = project;
 
         projectItem.addEventListener("click", function(event) {
-            saveCurrentProject(project);
-            printTasks(project);
+        saveCurrentProject(project);
+        if(index) {
+            printTasks();
+        } else {
+            window.location.href = "index.html";
+        };
         });
 
         container.appendChild(projectItem);
@@ -85,6 +91,7 @@ document.addEventListener("DOMContentLoaded", function(){
         .then(response => response.json())
         .then(newTasks => saveNewTasks(newTasks))
         .then(() => printTasks())
+        .then(() => printProjects())
         .catch(error => console.error(error));
     });
 })
