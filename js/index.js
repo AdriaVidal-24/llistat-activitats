@@ -36,7 +36,11 @@ export function printProjects() {
     projectItem.textContent = "Any project";
     projectItem.addEventListener("click", function(event) {
         saveCurrentProject("");
-        printTasks("");
+        if(index) {
+            printTasks();
+        } else {
+            window.location.href = "index.html";
+        };
     });
     container.appendChild(projectItem);
     projects.forEach(project => {
