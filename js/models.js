@@ -6,14 +6,14 @@ import { addTaskMonth, removeTaskMonth } from "./grafics.js";
 export class Task {
     static count = 1;
 
-    constructor(id, name, desc, date, category, priority, done, project = "No project") {
-        if(id == null) {
+    constructor(id, name, desc, date, category, priority, done, project = "Any project") {
+        if (id) {
+            this._id = id;
+        } else {
             Task.count = getCount();
             this._id = `task-${String(Task.count).padStart(3, "0")}`;
             Task.count++;
             saveCount(Task.count);
-        } else {
-            this._id = id;
         }
         this._name = name;
         this._desc = desc;

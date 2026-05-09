@@ -1,15 +1,14 @@
 export function saveNewTasks(newTasks) {
     const existingTasks = getTasks();
     const existingCategories = getCategories();
+    const existingProjects = getProjects();
 
     const newCategories = [];
+    const newProjects = [];
 
     newTasks.forEach(task => {
-        let id = task.id;
         let count = getCount();
-        if(existingTasks.some(existingTask => existingTask.id === id)) {
-            id =  `task-${String(count).padStart(3, "0")}`;
-        }
+        let id = count;
         count++;
         saveCount(count);
         task.id = id;
@@ -19,12 +18,16 @@ export function saveNewTasks(newTasks) {
             newCategories.push({ name: task.category.name, color: task.category.color });
         }
         task.category = name;
+            newProjects.push(project);
     }); 
     const updatedTasks = [...existingTasks, ...newTasks];
     localStorage.setItem('tasks', JSON.stringify(updatedTasks));
 
     const updatedCategories = [...existingCategories, ...newCategories];
     localStorage.setItem('categories', JSON.stringify(updatedCategories));
+
+    const updatedProjects = [...existingProjects, ...newProjects];
+    localStorage.setItem('projects', JSON.stringify(updatedProjects));
 }
 
 export function getTasks() {
