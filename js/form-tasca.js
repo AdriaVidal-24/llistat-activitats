@@ -1,7 +1,10 @@
+import { printProjects } from "./index.js";
 import { Task } from "./models.js";
 import { getCategories, getProjects, saveProject, deleteProject, saveTask } from "./storage.js";
 
 document.addEventListener("DOMContentLoaded", function(){
+
+    printProjects();
 
     let taskCategory = document.getElementById("task-category");
     let taskProject = document.getElementById("task-project");
@@ -62,6 +65,7 @@ document.addEventListener("DOMContentLoaded", function(){
         
         projectName.value = '';
         printProjectList();
+        printProjects();
     });
 
     taskForm.addEventListener("submit", function(event) {

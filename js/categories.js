@@ -1,3 +1,4 @@
+import { printProjects } from "./index.js";
 import { Category } from "./models.js";
 import { getCategories, saveCategory } from "./storage.js";
 
@@ -20,6 +21,7 @@ export function printCategories() {
 document.addEventListener("DOMContentLoaded", function(){
 
     printCategories();
+    printProjects();
 
     const categoryForm = document.getElementById("category");
 
