@@ -18,7 +18,11 @@ export function saveNewTasks(newTasks) {
             newCategories.push({ name: task.category.name, color: task.category.color });
         }
         task.category = name;
+
+        const project = task.project;
+        if(!existingProjects.includes(project) && !newProjects.includes(project)) {
             newProjects.push(project);
+        }
     }); 
     const updatedTasks = [...existingTasks, ...newTasks];
     localStorage.setItem('tasks', JSON.stringify(updatedTasks));
