@@ -1,23 +1,22 @@
-import { getCurrentProject, getProjects, getTasks, saveCurrentProject } from "./storage.js";
+import { getProjects, getTasks } from "./storage.js";
 
 let chart = null;
 
 export function printChart() {
-    const ctx = document.getElementById('Graph');
     
+    const ctx = document.getElementById('Graph');
     const tasks = getTasks();
     const projects = getProjects();
-    
     const projectLabels = ["Any project"];
     const data = [tasks.filter(task => task.done).length];
-    
+
     projects.forEach(project => {
         let currTasks = tasks.filter(task => task.project == project && task.done);
         data.push(currTasks.length);
         projectLabels.push(project);
     });
-    
-    if(chart) {
+
+    if (chart) {
         chart.destroy();
     }
 

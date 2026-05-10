@@ -14,16 +14,16 @@ export function saveNewTasks(newTasks) {
         task.id = id;
 
         const name = task.category.name;
-        if(!existingCategories.some(existingCategory => existingCategory.name === name)) {
+        if (!existingCategories.some(existingCategory => existingCategory.name === name)) {
             newCategories.push({ name: task.category.name, color: task.category.color });
         }
         task.category = name;
 
         const project = task.project;
-        if(!existingProjects.includes(project) && !newProjects.includes(project)) {
+        if (!existingProjects.includes(project) && !newProjects.includes(project)) {
             newProjects.push(project);
         }
-    }); 
+    });
     const updatedTasks = [...existingTasks, ...newTasks];
     localStorage.setItem('tasks', JSON.stringify(updatedTasks));
 
@@ -53,7 +53,7 @@ export function deleteTask(id) {
 export function toggleTask(id) {
     let taskListAux = getTasks();
     taskListAux.forEach(task => {
-        if(task.id === id) {
+        if (task.id === id) {
             task.done = !task.done;
         }
         return task;

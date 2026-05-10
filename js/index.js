@@ -2,14 +2,38 @@ import { printChart } from "./grafics.js";
 import { Task } from "./models.js";
 import { getCurrentProject, getProjects, getTasks, saveCurrentProject, saveNewTasks } from "./storage.js";
 
-export function printTasks() {
-    const tasks = getTasksByProject();
+document.addEventListener("DOMContentLoaded", function () {
+    printTasks();
+    printProjects();
 
-    const container = document.getElementById('task-list');
-    const containerDone = document.getElementById('done-task-list');
-    if(!container || !containerDone) {
+    const form = document.getElementById("import-form");
+    if (form == null) {
         return;
     }
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const file = document.getElementById("import-file").value;
+        fetch(`/llistat-activitats/dades/${file}`)
+            .then(response => response.json())
+            .then(newTasks => saveNewTasks(newTasks))
+            .then(() => printTasks())
+            .then(() => printProjects())
+            .catch(error => console.error(error));
+    });
+})
+
+export function printTasks() {
+
+    const tasks = getTasksByProject();
+    const container = document.getElementById('task-list');
+    const containerDone = document.getElementById('done-task-list');
+
+    if (!container || !containerDone) {
+        return;
+    }
+
     container.innerHTML = '';
     containerDone.innerHTML = '';
 
@@ -27,16 +51,16 @@ export function printProjects() {
 
     const container = document.getElementById('projects-aside');
     const index = document.getElementById('task-list');
-    if(!container) {
+    if (!container) {
         return;
     }
     container.innerHTML = '';
-    
+
     let projectItem = document.createElement("li");
     projectItem.textContent = "Any project";
-    projectItem.addEventListener("click", function(event) {
+    projectItem.addEventListener("click", function (event) {
         saveCurrentProject("");
-        if(index) {
+        if (index) {
             printTasks();
         } else {
             window.location.href = "index.html";
@@ -47,13 +71,13 @@ export function printProjects() {
         let projectItem = document.createElement("li");
         projectItem.textContent = project;
 
-        projectItem.addEventListener("click", function(event) {
-        saveCurrentProject(project);
-        if(index) {
-            printTasks();
-        } else {
-            window.location.href = "index.html";
-        };
+        projectItem.addEventListener("click", function (event) {
+            saveCurrentProject(project);
+            if (index) {
+                printTasks();
+            } else {
+                window.location.href = "index.html";
+            };
         });
 
         container.appendChild(projectItem);
@@ -73,29 +97,7 @@ function renderStats() {
     const totalTasks = tasks.length;
     const completedTasks = tasks.filter(task => task.done === true).length;
     const nonCompletedTasks = totalTasks - completedTasks;
-    document.getElementById("total-tasks").textContent = "Tasks: "+totalTasks;
-    document.getElementById("completed-tasks").textContent = "Completed Tasks: "+completedTasks;
-    document.getElementById("non-completed-tasks").textContent = "Non-Completed Tasks: "+nonCompletedTasks;
+    document.getElementById("total-tasks").textContent = "Tasks: " + totalTasks;
+    document.getElementById("completed-tasks").textContent = "Completed Tasks: " + completedTasks;
+    document.getElementById("non-completed-tasks").textContent = "Non-Completed Tasks: " + nonCompletedTasks;
 }
-
-document.addEventListener("DOMContentLoaded", function(){
-    printTasks();
-    printProjects();
-
-    const form = document.getElementById("import-form");
-    if(form == null) {
-        return;
-    }
-
-    form.addEventListener("submit", function(event) {
-        event.preventDefault();
-
-        const file = document.getElementById("import-file").value;
-        fetch(`/llistat-activitats/dades/${file}`)
-        .then(response => response.json())
-        .then(newTasks => saveNewTasks(newTasks))
-        .then(() => printTasks())
-        .then(() => printProjects())
-        .catch(error => console.error(error));
-    });
-})

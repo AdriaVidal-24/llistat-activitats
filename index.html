@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <meta name="description" content="Web able to plan, manage and follow up on personal tasks">
     <meta name="keywords" content="Activities, llist, objectives, planning, management, tasks">
     <meta name="author" content="Adrià Vidal Ruiz">
     <meta name="robots" content="index, follow">
-    
+
     <meta property="og:title" content="Task manager">
     <meta property="og:description" content="Web able to plan, manage and follow up on personal tasks">
     <meta property="og:url" content="https://adriavidal-24.github.io/llistat-activitats/">
     <meta property="og:type" content="website">
-    
+
     <title>Task manager</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="icon" type="image/x-icon" href="i/favicon.ico">
@@ -37,7 +38,7 @@
 
         <div>
             <h1>Task manager</h1>
-    
+
             <section class="flex column a-center">
                 <h2>Add tasks</h2>
                 <div class="flex w-90 j-between">
@@ -57,21 +58,21 @@
                     <p id="completed-tasks"></p>
                 </div>
             </section>
-    
+
             <section class="flex column">
                 <h2>Pending tasks</h2>
                 <div class="flex g-1 task-list" id="task-list">
 
                 </div>
             </section>
-    
+
             <section class="flex column">
                 <h2>Done</h2>
                 <div class="flex g-1 task-list" id="done-task-list">
 
                 </div>
             </section>
-    
+
             <section class="flex column">
                 <h2>Graph</h2>
                 <canvas id="Graph"></canvas>
@@ -82,4 +83,5 @@
 <script type="module" src="js/index.js"></script>
 <script type="module" src="js/grafics.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </html>
