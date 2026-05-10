@@ -134,14 +134,6 @@ a {
     justify-content: start;
 }
 
-.j-center {
-    justify-content: center;
-}
-
-.j-end {
-    justify-content: end;
-}
-
 .j-around {
     justify-content: space-around;
 }
@@ -150,24 +142,8 @@ a {
     justify-content: space-between;
 }
 
-.a-start {
-    align-items: start;
-}
-
 .a-center {
     align-items: center;
-}
-
-.a-end {
-    align-items: end;
-}
-
-.a-around {
-    align-items: space-around;
-}
-
-.a-between {
-    align-items: space-between;
 }
 
 .w-25 {
@@ -182,10 +158,6 @@ a {
     width: 50%;
 }
 
-.w-75 {
-    width: 75%;
-}
-
 .w-90 {
     width: 90%;
 }
@@ -196,14 +168,6 @@ a {
 
 .g-1 {
     gap: 1rem;
-}
-
-.g-2 {
-    gap: 2rem;
-}
-
-.g-3 {
-    gap: 3rem;
 }
 
 .p-2 {
