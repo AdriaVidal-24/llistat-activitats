@@ -1,36 +1,26 @@
 :root {
-    --main-background: #eeeeee;
-    --light-background: #d6d5d546;
-
-    --text: #1f2933;
-}
-
-.accent, button {
-    --main-background: #1e3a5f;
-    --light-background: #2b4c73;
-
-    --text: #f0f4f8;
-}
-
-.dark {
     --main-background: #121417;
     --light-background: #1c1f24;
 
     --text: #e5e7eb;
 }
 
-.dark .accent {
+.accent,
+button {
     --main-background: #16283d;
     --light-background: #1f3a57;
 
     --text: #dbeafe;
 }
 
-body, html {
+body,
+html {
     margin: 0;
 }
 
-aside, body, html {
+aside,
+body,
+html {
     background-color: var(--main-background);
 }
 
@@ -62,19 +52,23 @@ aside {
     width: 15vw;
 }
 
-aside > section {
+aside>section {
     max-height: 80vh;
     overflow-x: hidden;
     overflow-y: auto;
 }
 
-form > * {
+form>* {
     margin: 1%;
     min-height: 1.5rem;
 }
 
 input[type="color"] {
     max-width: 5rem;
+}
+
+input {
+    color: black;
 }
 
 nav *:not(ul) {
@@ -90,7 +84,7 @@ ul {
     padding-left: 10%;
 }
 
-li{
+li {
     width: 100%;
     min-height: 30%;
 }
@@ -101,22 +95,26 @@ main {
     height: 100%;
 }
 
-main > div {
+main>div {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-main > div section {
+main>div section {
     width: 90%;
     margin: 1%;
     padding: 1%;
-    
+
     border-radius: 10px;
 
     box-shadow: 0 6px 1px rgba(231, 233, 235, 0.3);
     background-color: var(--light-background);
+}
+
+a {
+    text-decoration: none;
 }
 
 /* COMMON CLASSES */
@@ -130,7 +128,7 @@ main > div section {
 }
 
 .j-start {
-    justify-content: start;   
+    justify-content: start;
 }
 
 .j-center {
@@ -150,7 +148,7 @@ main > div section {
 }
 
 .a-start {
-    align-items: start;   
+    align-items: start;
 }
 
 .a-center {
@@ -211,11 +209,11 @@ main > div section {
 
 /* SPECIFIC CLASSES */
 
-.small > section {
+.small>section {
     width: 50%;
 }
 
-.categories > section * {
+.categories>section * {
     width: 90%;
 }
 
@@ -227,7 +225,7 @@ main > div section {
     max-width: fit-content;
 }
 
-.category > div > div{
+.category>div>div {
 
     width: 30px;
     height: 30px;
@@ -255,7 +253,8 @@ label {
     flex-wrap: wrap;
 }
 
-#done-task-list p, #done-task-list svg {
+#done-task-list p,
+#done-task-list svg {
     text-decoration: line-through;
     opacity: 0.6;
 }
