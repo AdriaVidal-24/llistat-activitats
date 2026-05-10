@@ -67,8 +67,11 @@ input[type="color"] {
     max-width: 5rem;
 }
 
-input {
-    color: black;
+input,
+select {
+    background-color: #1f3a57;
+    outline: none;
+    border: 2px solid #16283d;
 }
 
 nav *:not(ul) {
